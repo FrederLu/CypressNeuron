@@ -15,7 +15,7 @@ describe('My First Test', () => {
       // cy.wait(2000).wrap($iframe.contents().find('[placeholder="邮箱帐号或手机号码"]')).then($n=>{
       //     cy.wrap($n).type('psp2010tiger')
       // })
-      cy.wrap($iframe.contents().find('[name="password"]')).type('tiger317401')
+      cy.wrap($iframe.contents().find('[name="password"]')).type('317!401')
       cy.wrap($iframe.contents().find('#dologin')).click()
     })
     cy.url().should("include", 'main')
