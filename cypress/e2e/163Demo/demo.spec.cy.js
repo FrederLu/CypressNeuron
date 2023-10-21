@@ -16,7 +16,7 @@ describe('My First Test', () => {
       //     cy.wrap($n).type('psp2010tiger')
       // })
       cy.wrap($iframe.contents().find('[name="password"]')).type('317!401')
-      cy.wrap($iframe.contents().find('#dologin')).click()
+      // cy.wrap($iframe.contents().find('#dologin')).click()
     })
     cy.url().should("include", 'main')
     cy.title().should('include', '网易')
