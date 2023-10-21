@@ -1,0 +1,18 @@
+{
+    "testBaseUrl": "127.0.0.1:8114",
+    "getCells": {
+        "params": {
+            "script": {
+                "code_hash": "0x5c5069eb0857efc65e1bca0c07df34c31663b3622fd3876c876320fc9634e2a8",
+                "hash_type": "type",
+                "args": "0x9a2a6609e5cf842facf1f071e29c02d0bf9a4c90"
+            },
+            "script_type": "lock"
+        },
+        "sort": {
+            "ASC": "asc",
+            "DESC": "desc"
+        },
+        "quantity": "0x64"
+    }
+}

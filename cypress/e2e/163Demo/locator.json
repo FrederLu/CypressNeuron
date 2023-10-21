@@ -1,0 +1,9 @@
+{
+    "login": {
+        "url": "https://mail.163.com/",
+        "iframe": "iframe[frameborder=\"0\"]",
+        "account": "input[placeholder=\"邮箱帐号或手机号码\"]",
+        "password": "input[name=\"password\"]",
+        "submit": "#dologin"
+    }
+}
