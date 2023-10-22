@@ -4,10 +4,10 @@ on:
     branches:
       - main
 jobs:
-    Running_cypress_on_linux:
+   cypress_on_linux:
       runs-on: ubuntu-20.04
       steps:
-        - name: Checkout  🛎
+        - name: Checkout
           uses: actions/checkout@v2
         - name: Use Node.js
           uses: actions/setup-node@v3
@@ -15,10 +15,34 @@ jobs:
             node-version: '16.20.x'
         # Install NPM dependencies, cache them correctly
         # and run all Cypress tests
-        - name: Custom Tests 🧪
+        - name: Custom Tests
           uses: cypress-io/github-action@v4
           # with:
           #   build: npm run build
           #   start: npm start
           #   breowser: chrome
           #   wait-on: 'http://localhost:3000'
+
+   cypress_on_macOS:
+    runs-on: macos-12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.20.x'
+      - name: Custom Tests
+        uses: cypress-io/github-action@v4
+      
+   cypress_on_Windows:
+      runs-on: windows-2022
+      steps:
+        - name: Checkout  🛎
+          uses: actions/checkout@v2
+        - name: Use Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16.20.x'
+        - name: Custom Tests 🧪
+          uses: cypress-io/github-action@v4
