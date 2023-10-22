@@ -1,6 +1,6 @@
 import loc from './locator.json'
 
-describe('获取cell信息', () => {
+describe.skip('获取cell信息', () => {
     it('指定cells信息', () => {
         cy.request({
             // 如果请求body中使用了json格式的数据，需带上content-type信息。

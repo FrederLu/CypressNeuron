@@ -8,7 +8,7 @@ describe.skip('登录', () => {
         login.openPage()
         login.iframe.then($iframe => {
             cy.wait(2000).wrap($iframe.contents().find(loc.login.account)).type('psp2010tiger')
-            cy.wrap($iframe.contents().find(loc.login.password)).type('317**401')
+            cy.wrap($iframe.contents().find(loc.login.password)).type('310&601')
             cy.wrap($iframe.contents().find(loc.login.submit)).click()
         })
     });
