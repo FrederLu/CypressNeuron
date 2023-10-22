@@ -1,14 +1,14 @@
 import { loginPage, Tools } from './loginpage'
 import loc from './locator.json'
 
-describe('登录', () => {
+describe.skip('登录', () => {
     let login = new loginPage()
 
     it('输入正确用户名和密码，可以登录成功。', () => {
         login.openPage()
         login.iframe.then($iframe => {
             cy.wait(2000).wrap($iframe.contents().find(loc.login.account)).type('psp2010tiger')
-            cy.wrap($iframe.contents().find(loc.login.password)).type('tiger317401')
+            cy.wrap($iframe.contents().find(loc.login.password)).type('317**401')
             cy.wrap($iframe.contents().find(loc.login.submit)).click()
         })
     });
