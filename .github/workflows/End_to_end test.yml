@@ -4,21 +4,35 @@ on:
     branches:
       - main
 jobs:
-  cypress-run:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout  🛎
-        uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.20.x'
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Custom Tests 🧪
-        uses: cypress-io/github-action@v4
-        # with:
-        #   build: npm run build
-        #   start: npm start
-        #   breowser: chrome
-        #   wait-on: 'http://localhost:3000'
+    cypress-run:
+      runs-on: ubuntu-20.04
+      steps:
+        - name: Checkout  🛎
+          uses: actions/checkout@v2
+        - name: Use Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16.20.x'
+        # Install NPM dependencies, cache them correctly
+        # and run all Cypress tests
+        - name: Custom Tests 🧪
+          uses: cypress-io/github-action@v4
+          # with:
+          #   build: npm run build
+          #   start: npm start
+          #   breowser: chrome
+          #   wait-on: 'http://localhost:3000'
+
+    cypress_run:
+      runs-on: Windows11
+      steps:
+        - name: Checkout  🛎
+          uses: actions/checkout@v2
+        - name: Use Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16.20.x'
+        # Install NPM dependencies, cache them correctly
+        # and run all Cypress tests
+        - name: Custom Tests 🧪
+          uses: cypress-io/github-action@v4

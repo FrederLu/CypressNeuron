@@ -1,4 +1,4 @@
-describe('demo', () => {
+describe.skip('demo', () => {
     it('baidu', () => {
         cy.visit('https://www.baidu.com/')
         cy.get('#kw').type('hello')
